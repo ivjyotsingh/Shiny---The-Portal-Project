@@ -20,7 +20,7 @@ fetch_species <- function(){
 
 #' @export
 fetch_surveys <- function(){
-  read.csv(here::here("data","surveys.csv"))
+  surveys <- read.csv(here::here("data","surveys.csv"))
   surveys$species[is.na(surveys$species)] <- "NA"
   surveys
 }
